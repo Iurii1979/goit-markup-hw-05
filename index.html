@@ -12,7 +12,7 @@
       href="https://fonts.googleapis.com/css2?family=Raleway:wght@800&family=Roboto:wght@400;500;700;900&display=swap"
       rel="stylesheet"
     />
-    <!-- Custom styles --->
+    <!--- Custom styles --->
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/modern-normalize@1.1.0/modern-normalize.min.css"
@@ -30,7 +30,9 @@
         <nav class="header-nav">
           <ul class="header-list list-style">
             <li class="header-item">
-              <a class="header-link link" href="./index.html">Studio</a>
+              <a class="header-link header-current link" href="./index.html"
+                >Studio</a
+              >
             </li>
             <li class="header-item">
               <a class="header-link link" href="./portfolio.html">Portfolio</a>
@@ -62,7 +64,9 @@
       <section class="hero-section">
         <div class="container hero-conteiner">
           <h1 class="hero-title">Effective Solutions for Your Business</h1>
-          <button class="hero-btn-txt" type="button">Order Service</button>
+          <button class="hero-btn-txt" type="button" data-modal-open>
+            Order Service
+          </button>
         </div>
       </section>
 
@@ -529,5 +533,19 @@
         </div>
       </div>
     </footer>
+
+    <!------- Modal window ------->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button class="modal-btn" type="button" data-modal-close>
+          <svg class="modal-icon" width="8" height="8">
+            <use href="./images/icons.svg#icon-close-black-18dp-2-1"></use>
+          </svg>
+        </button>
+      </div>
+    </div>
+
+    <script src="./js/modal.js"></script>
   </body>
 </html>
