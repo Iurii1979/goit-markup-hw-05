@@ -141,8 +141,8 @@ img {
 }
 
 .header-logo {
-  padding-top: 24px;
-  padding-bottom: 24px;
+  /* padding-top: 24px;
+  padding-bottom: 24px; */
   margin-right: 76px;
   font-family: var(--secondary-fonts);
   font-weight: 800;
@@ -182,6 +182,7 @@ img {
 
 .header-link {
   position: relative;
+  display: block;
   padding-top: 24px;
   padding-bottom: 24px;
   font-weight: 500;
@@ -189,6 +190,10 @@ img {
   color: var(--primary-txt-navy-blue);
 
   transition: color var(--trns-durat);
+}
+
+.header-current {
+  color: #404bbf;
 }
 
 .header-link:hover,
@@ -468,17 +473,17 @@ img {
   border: 1px solid var(--color-light-slate);
   border-radius: 4px;
 
-  fill: var(--color-light-slate);
-  transition: border-color var(--trns-durat);
+  color: var(--color-light-slate);
+  transition: border-color var(--trns-durat), color var(--trns-durat);
 }
 
 .customers-link:hover,
 .customers-link:focus {
   border-color: var(--color-ocean);
+  color: var(--color-ocean);
 }
 
-.customers-link:hover .customers-icon,
-.customers-link:focus .customers-icon {
+.customers-icon {
   fill: currentColor;
 }
 
@@ -621,6 +626,7 @@ img {
   border-radius: 50%;
   background: var(--color-cornflower);
   border: 1px solid rgba(0, 0, 0, 0.1);
+  cursor: pointer;
 }
 
 .modal-icon {
@@ -717,12 +723,12 @@ img {
 
 .overlay {
   position: absolute;
-  overflow-y: scroll;
+
   left: 0;
   top: 0;
   width: 100%;
   height: 100%;
-  transform: translate(0, 100%);
+  transform: translateY(101%);
   transition: transform var(--trns-durat);
 
   padding-top: 40px;
